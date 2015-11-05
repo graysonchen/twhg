@@ -27,7 +27,7 @@ class GithubEvent < ActiveRecord::Base
 
 
   def get_match_cardid(body)
-    (/cardid:(\w+)/.match body)[1] rescue ''
+    /(cardid)\:\s*([0-9a-z]+)/.match(body)[2] rescue ''
   end
 
 
