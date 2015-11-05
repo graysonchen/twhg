@@ -19,3 +19,4 @@ Gemfile.lock
 secrets.yml
 database.yml
 db/schema.rb
+
