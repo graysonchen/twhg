@@ -12,7 +12,46 @@ When a user creates a pull request with the trello card link, automatically move
 * MySQL
 * Redis
 
-## How To
+## Usage
+
+*Demo*
+
+```
+trello: https://trello.com/b/8ocOWx6F/interview-q
+Repository: git@github.com:cgg5207/trello_card_test.git
+host: http://twhg.growcn.com/github_webhooks
+```
+
+*Github webhook config*
+
+![github webhook config](https://raw.github.com/cgg5207/twhg/master/doc/github-webhook-config.jpg)
+
+
+*Create pull request example*
+
+![pull-request](https://raw.github.com/cgg5207/twhg/master/doc/pull-request-relation-trello-card-link.jpg)
+
+*Automatically move to reviewing*
+
+![doing-move-reviewing](https://raw.github.com/cgg5207/twhg/master/doc/doing-move-reviewing.jpg)
+
+*Pull request is accepted*
+
+![pull-request-is-accepted](https://raw.github.com/cgg5207/twhg/master/doc/pull-request-is-accepted.jpg)
+
+*Automatically move to released*
+
+![move-released](https://raw.github.com/cgg5207/twhg/master/doc/move-released.png)
+
+
+## Deployment
+
+```
+cap production deploy
+cap production sidekiq:start
+cap production db:pull
+
+```
 
 
 ## Todo
