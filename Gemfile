@@ -49,8 +49,19 @@ group :development, :test do
   gem 'database_cleaner'
   gem "fakeweb", "~> 1.3"
 
+  # cap
+  gem 'capistrano-rails', '1.1.3'
+  gem 'capistrano-rvm'
+  gem 'capistrano', '3.4.0'
+  # gem 'capistrano3-unicorn'
+  gem 'capistrano-bundler'
+
+  # gem 'capistrano3-puma'
+  gem 'capistrano3-puma', github: "seuros/capistrano-puma"
+  # gem 'capistrano-sidekiq' #, github: 'seuros/capistrano-sidekiq'
 end
 
+gem 'puma', '2.11.2'
 
 gem 'github_webhook'
 
