@@ -22,7 +22,12 @@
 # role :db,  %w{deploy@example.com}
 
 # web1
-server 'growcn.com', user: 'deploy', roles: %w{web app db}, primary: true
+server 'growcn.com', user: 'deploy', roles: %w{web app db}#, my_property: :my_value
+set :branch, "master"
+set :deploy_to, "/home/deploy/deploy/growcn/twhg"
+set :rvm_ruby_version, 'ruby-2.1.2@twhg'      # Defaults to: 'default'
+set :puma_workers, 1
+
 
 # Configuration
 # =============

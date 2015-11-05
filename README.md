@@ -5,7 +5,6 @@
 
 # TODO
 * use active_job
-* use mysql & gp
 
 
 #ref:
