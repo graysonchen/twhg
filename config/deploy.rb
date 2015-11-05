@@ -37,6 +37,17 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :bundle_flags, ''#--deployment --quiet
 
 
+#####
+# if you haven't already specified
+# set :rails_env, "production"
+
+# if you want to remove the local dump file after loading
+set :db_local_clean, true
+
+# if you want to remove the dump file from the server after downloading
+set :db_remote_clean, true
+
+
 namespace :deploy do
 
   after :restart, :clear_cache do
