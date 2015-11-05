@@ -1,6 +1,6 @@
 class GithubEvent < ActiveRecord::Base
   serialize :result, JSON
-
+  after_save :propel_flow
 
   def propel_flow
     case event_name
