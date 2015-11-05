@@ -1,40 +1,18 @@
-== trello webhook github
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# trello webhook github
 
 
 
-https://github.com/cgg5207/one_test/settings/hooks
 
-sandbox env
-```
-  rails s
-  ssh -C2qTnN -R 3041:localhost:3000 wusifo
-  viset http://qt.test.growcn.com/github_webhooks
-```
+# TODO
+* use active_job
+* use mysql & gp
 
+
+#ref:
+* https://developers.trello.com/sandbox
+* https://trello.com/app-key
+* https://github.com/zanker/github-trello
+* https://larry-price.com/blog/2014/03/20/using-the-trello-api-in-ruby
+* http://www.sitepoint.com/customizing-trello-ruby/
+* https://github.com/jeremytregunna/ruby-trello
+* https://github.com/ssaunier/github_webhook
