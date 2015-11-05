@@ -8,6 +8,9 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 
+# set :sidekiq_role, 'sidekiq'
+set :sidekiq_config, 'config/sidekiq.yml'
+
 
 # role-based syntax
 # ==================
@@ -27,6 +30,7 @@ set :branch, "master"
 set :deploy_to, "/home/deploy/deploy/growcn/twhg"
 set :rvm_ruby_version, 'ruby-2.1.2@twhg'      # Defaults to: 'default'
 set :puma_workers, 1
+
 
 
 # Configuration
