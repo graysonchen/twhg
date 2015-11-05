@@ -32,12 +32,7 @@ class GithubEvent < ActiveRecord::Base
 
 
   def self.move_other_list(card_id,list_id)
-    if card_id.present?
-      card = Trello::Card.find(card_id)
-      card.move_to_list(list_id)
-    end
-  rescue Trello::Error => e
-    #TODO
+    TrelloPusherJob.perform_later(card_id,list_id)
   end
 
 end

@@ -51,6 +51,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'database_cleaner'
   gem "fakeweb", "~> 1.3"
+  gem "rspec-sidekiq"
 
   # cap
   gem 'capistrano-rails', '1.1.3'
@@ -60,9 +61,10 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails-console'
   gem 'capistrano-rails-tail-log'
+  gem "capistrano-db-tasks", require: false
   # gem 'capistrano3-puma'
   gem 'capistrano3-puma', github: "seuros/capistrano-puma"
-  # gem 'capistrano-sidekiq' #, github: 'seuros/capistrano-sidekiq'
+  gem 'capistrano-sidekiq' #, github: 'seuros/capistrano-sidekiq'
 
 end
 
@@ -71,3 +73,6 @@ gem 'puma', '2.11.2'
 gem 'github_webhook'
 
 gem 'ruby-trello'
+
+gem 'sidekiq'
+gem 'sinatra', :require => nil
