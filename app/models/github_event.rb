@@ -11,7 +11,7 @@ class GithubEvent < ActiveRecord::Base
 
 
   def action_pull_request_stat
-    card_id = get_match_cardid(result["#{event_name}"]['body'])
+    card_id = get_match_url2cardid(result["#{event_name}"]['body'])
     case result['action']
     when 'opened'
       self.class.move_other_list(card_id, Setting.trello.list.reviewing)
@@ -21,9 +21,10 @@ class GithubEvent < ActiveRecord::Base
   end
 
 
-  # def action_push_stat
-  #   #case result['action']
-  # end
+  def get_match_url2cardid(body)
+    /https:\/\/trello.com\/c\/(.*)\//.match(body)[1] rescue ''
+    # /https:\/\/.*\/.*\/(.*)\//.match(body)[1] rescue ''
+  end
 
 
   def get_match_cardid(body)
