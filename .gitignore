@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+Gemfile.lock
+secrets.yml
+database.yml
