@@ -22,7 +22,7 @@ class GithubEvent < ActiveRecord::Base
 
 
   def get_match_url2cardid(body)
-    /https:\/\/trello.com\/c\/(.*)\//.match(body)[1] rescue ''
+    /https:\/\/trello.com\/c\/([0-9a-zA-Z]+)/.match(body)[1] rescue ''
     # /https:\/\/.*\/.*\/(.*)\//.match(body)[1] rescue ''
   end
 

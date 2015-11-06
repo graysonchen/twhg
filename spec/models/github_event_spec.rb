@@ -42,9 +42,13 @@ RSpec.describe GithubEvent, type: :model do
       test test sdflsf
       asdfasdf adfasdf
     EOV
+    body4 = "https://trello.com/c/Yj5LYa8F"
+    body5 = "https://trello.com/c/Yj5LYa8F "
     ge = GithubEvent.new
     expect(ge.get_match_url2cardid(body1)).to eql 'W6TkmuE9'
     expect(ge.get_match_url2cardid(body2)).to eql ''
     expect(ge.get_match_url2cardid(body3)).to eql ''
+    expect(ge.get_match_url2cardid(body4)).to eql 'Yj5LYa8F'
+    expect(ge.get_match_url2cardid(body5)).to eql 'Yj5LYa8F'
   end
 end
