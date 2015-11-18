@@ -1,0 +1,24 @@
+defaults: &defaults
+  github:
+    webhook_secret: '123456'
+  trello:
+    developer_public_key: xxxxxxxxxxxxxxxxxxxxxxxx
+    member_token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    list:
+      reviewing: 5639c3cfd4c49c99cd314a8a
+      released: 5639c3d3912a4c73984f8189
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  trello:
+    developer_public_key: xxxxxxxxxxxxxxxxxxxxxxxx
+    member_token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    list:
+      reviewing: 563717697a3a0bd3b4f570ed
+      released: 56371788d1c03a51ecec00d9
