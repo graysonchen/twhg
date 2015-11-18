@@ -33,7 +33,9 @@ class GithubEvent < ActiveRecord::Base
 
 
   def self.move_other_list(card_id,list_id)
-    TrelloPusherJob.perform_later(card_id,list_id)
+    if card_id.present?
+      TrelloPusherJob.perform_later(card_id,list_id)
+    end
   end
 
 end
